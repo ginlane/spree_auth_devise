@@ -3,3 +3,4 @@ spec/dummy
 coverage
 Gemfile.lock
 *.swp
+.DS_Store

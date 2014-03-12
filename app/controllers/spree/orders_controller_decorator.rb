@@ -1,3 +1,4 @@
+if defined? Spree::Frontend
 require_dependency 'spree/orders_controller'
 Spree::OrdersController.class_eval do
   before_filter :check_authorization
@@ -13,4 +14,5 @@ Spree::OrdersController.class_eval do
         authorize! :create, Spree::Order.new
       end
     end
+end
 end

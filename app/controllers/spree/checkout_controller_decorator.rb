@@ -1,3 +1,4 @@
+if defined? Spree::Frontend
 require_dependency 'spree/checkout_controller'
 require 'spree/core/validators/email'
 Spree::CheckoutController.class_eval do
@@ -53,4 +54,5 @@ Spree::CheckoutController.class_eval do
       return order_path(@order) if spree_current_user
       spree.token_order_path(@order, @order.token)
     end
+end
 end
